@@ -6,7 +6,7 @@ I know tasks like that are best task for GPU, not CPU.
 But I'm not looking to write fastest mandelbrot so it realy doesn't matter for me.
 For me it's cool way to learn some optimalizations. First version is just basic implementation with threads. 
 
-![Mandelbrot](https://github.com/AdamPudil/Mandelbrot/img/default_view.png)
+![Mandelbrot](https://github.com/AdamPudil/Mandelbrot/blob/main/img/default_view.png)
 
 ## Version performance
 
