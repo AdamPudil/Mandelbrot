@@ -35,27 +35,21 @@ void calculateMandelbrotThreaded(ThreadData threadData)
     double zoom = threadData.zoom;
     int threadIndex = threadData.threadIndex;
 
-    double scaled_height = double(height) * 2.0 - 1.0;
-    double scaled_width = double(width) * 2.0 - 1.0;
-
     double size_x = 2 / zoom;
     double size_y = size_x * (double(height) / double(width));
-
-    double precalculated_something_x = (size_x / double(width)) + xOffset; 
-    double precalculated_something_y = (size_y / double(width)) + yOffset;
 
     for (int y = threadIndex; y < height; y += numThreads)
     {
         for (int x = 0; x < width; ++x)
         {
-            double normal_x = x / scaled_width; 
-            double normal_y = y / scaled_height;
+            double normal_x = x / double(width) * 2.0 - 1.0; 
+            double normal_y = y / double(height) * 2.0 - 1.0;
 
             double zx = 0.0;
             double zy = 0.0;
 
-            double cx = normal_x * precalculated_something_x;
-            double cy = normal_y * precalculated_something_y;
+            double cx = normal_x * (size_x / double(width)) + xOffset;
+            double cy = normal_y * (size_y / double(width)) + yOffset;
 
             int iterations = 0;
 
