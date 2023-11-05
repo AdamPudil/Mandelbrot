@@ -32,7 +32,7 @@ int main()
     int width = 1280;
     int height = 720;
     int maxIterations = 400;
-    int targetFPS = 30; // Set your desired target frame rate
+    int targetFPS = 100; // Set your desired target frame rate
     int frameCount = 0;
     double actualFPS = 0;
 

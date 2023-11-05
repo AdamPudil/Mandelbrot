@@ -15,7 +15,7 @@ OBJS := $(patsubst src/%.cpp,obj/%.o,$(SRCS))
 HEADERS = $(SRCS:.cpp=.h)
 
 # Executable name
-TARGET = mandelbrot
+TARGET = mandelbrot.bin
 
 # Default target
 all: $(TARGET)
